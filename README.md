@@ -1,106 +1,48 @@
-<p align="center">
-
-  <h1 align="center">Mip-Splatting: Alias-free 3D Gaussian Splatting</h1>
-  <p align="center">
-    <a href="https://niujinshuchong.github.io/">Zehao Yu</a>
-    ·
-    <a href="https://apchenstu.github.io/">Anpei Chen</a>
-    ·
-    <a href="https://github.com/hbb1">Binbin Huang</a>
-    ·
-    <a href="https://tsattler.github.io/">Torsten Sattler</a>
-    ·
-    <a href="http://www.cvlibs.net/">Andreas Geiger</a>
-
-  </p>
-  <h3 align="center"><a href="https://drive.google.com/file/d/1Q7KgGbynzcIEyFJV1I17HgrYz6xrOwRJ/view?usp=sharing">Paper</a> | <a href="https://arxiv.org/pdf/2311.16493.pdf">arXiv</a> | <a href="https://niujinshuchong.github.io/mip-splatting/">Project Page</a>  | <a href="https://niujinshuchong.github.io/mip-splatting-demo/">Online Viewer</a> </h3>
-  <div align="center"></div>
-</p>
-
-
-<p align="center">
-  <a href="">
-    <img src="./media/bicycle_3dgs_vs_ours.gif" alt="Logo" width="95%">
-  </a>
-</p>
-
-<p align="center">
-We introduce a 3D smoothing filter and a 2D Mip filter for 3D Gaussian Splatting (3DGS), eliminating multiple artifacts and achieving alias-free renderings.  
-</p>
-<br>
-
-# Update
-We integrated an improved densification metric proposed in [Gaussian Opacity Fields](https://niujinshuchong.github.io/gaussian-opacity-fields/), which significantly improves the novel view synthesis results, please check the [paper](https://arxiv.org/pdf/2404.10772.pdf) for details. Please download the lastest code and reinstall `diff-gaussian-rasterization` to try it out. 
-
-# Installation
-Clone the repository and create an anaconda environment using
 ```
-git clone git@github.com:autonomousvision/mip-splatting.git
-cd mip-splatting
+conda create -y -n Unios python=3.8
+conda activate Unios 
 
-conda create -y -n mip-splatting python=3.8
-conda activate mip-splatting
+pip install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 --index-url https://download.pytorch.org/whl/cu118
 
-pip install torch==1.12.1+cu113 torchvision==0.13.1+cu113 -f https://download.pytorch.org/whl/torch_stable.html
-conda install cudatoolkit-dev=11.3 -c conda-forge
+#如果你没有CUDAtoolkits需要自行安装，版本与pytorch对应
+conda install cudatoolkit-dev=11.x -c conda-forge    11.x为对应的CUDAtoolkits版本
+#推荐用Nvidia官网的方法装
 
+pip install setuptools==69.5.1 #very important
+pip install imageio
+pip install scikit-image
 pip install -r requirements.txt
-
 pip install submodules/diff-gaussian-rasterization
 pip install submodules/simple-knn/
+
+
+#安装Segment Anything
+pip install git+https://github.com/facebookresearch/segment-anything.git
+下载SAM权重，并放在对应路径
 ```
 
-# Dataset
-## Blender Dataset
-Please download and unzip nerf_synthetic.zip from the [NeRF's official Google Drive](https://drive.google.com/drive/folders/128yBriW1IG_3NJ5Rp7APSTZsJqdJdfc1). Then generate multi-scale blender dataset with
+
+运行方式
+#输入视频
+
+#以1/4分辨率训练场景 
 ```
-python convert_blender_data.py --blender_dir nerf_synthetic/ --out_dir multi-scale
+CUDA_VISIBLE_DEVICES=0 python train.py -s /media/lh/extradata/Nerf_sence/0280 -m NerF_sence/0280 -r 4 --port 6312 --kernel_size 0.1
 ```
-
-## Mip-NeRF 360 Dataset
-Please download the data from the [Mip-NeRF 360](https://jonbarron.info/mipnerf360/) and request the authors for the treehill and flowers scenes.
-
-# Training and Evaluation
+#生成双目立体匹配数据集
 ```
-# single-scale training and single-scale testing on NeRF-synthetic dataset
-python scripts/run_nerf_synthetic_stmt.py 
-
-# multi-scale training and multi-scale testing on NeRF-synthetic dataset
-python scripts/run_nerf_synthetic_mtmt.py 
-
-# single-scale training and single-scale testing on the mip-nerf 360 dataset
-python scripts/run_mipnerf360.py 
-
-# single-scale training and multi-scale testing on the mip-nerf 360 dataset
-python scripts/run_mipnerf360_stmt.py 
+ CUDA_VISIBLE_DEVICES=0 python render_stereo.py -m NerF_sence/0280 --data_device cpu
+```
+#生成用于双目立体匹配的3D飞行前景
+```
+ CUDA_VISIBLE_DEVICES=0 python render_fore3D_Stereo.py -m NerF_sence/0280--data_device cpu
 ```
 
-# Online viewer
-After training, you can fuse the 3D smoothing filter to the Gaussian parameters with
+#生成光流数据集
 ```
-python create_fused_ply.py -m {model_dir}/{scene} --output_ply fused/{scene}_fused.ply"
+ CUDA_VISIBLE_DEVICES=0 python render_flow.py -m NerF_sence/0280 --data_device cpu
 ```
-Then use our [online viewer](https://niujinshuchong.github.io/mip-splatting-demo) to visualize the trained model.
-
-# Acknowledgements
-This project is built upon [3DGS](https://github.com/graphdeco-inria/gaussian-splatting). Please follow the license of 3DGS. We thank all the authors for their great work and repos. 
-
-# Citation
-If you find our code or paper useful, please cite
-```bibtex
-@article{Yu2023MipSplatting,
-  author    = {Yu, Zehao and Chen, Anpei and Huang, Binbin and Sattler, Torsten and Geiger, Andreas},
-  title     = {Mip-Splatting: Alias-free 3D Gaussian Splatting},
-  journal   = {arXiv:2311.16493},
-  year      = {2023},
-}
+#生成用于光流的3D飞行前景
 ```
-If you find our improved densification metric useful, please kindly cite
-```
-@article{Yu2024GOF,
-  author    = {Yu, Zehao and Sattler, Torsten and Geiger, Andreas},
-  title     = {Gaussian Opacity Fields: Efficient High-quality Compact Surface Reconstruction in Unbounded Scenes},
-  journal   = {arXiv:2404.10772},
-  year      = {2024},
-}
+ CUDA_VISIBLE_DEVICES=0 python render_fore3D_flow.py -m NerF_sence/0280 --data_device cpu
 ```
