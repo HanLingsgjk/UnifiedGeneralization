@@ -23,9 +23,8 @@ pip install git+https://github.com/facebookresearch/segment-anything.git
 
 
 运行方式
-#输入视频
 
-#以1/4分辨率训练场景 
+首先以训练场景 
 ```
 CUDA_VISIBLE_DEVICES=0 python train.py -s /media/lh/extradata/Nerf_sence/0280 -m NerF_sence/0280 -r 4 --port 6312 --kernel_size 0.1
 ```
