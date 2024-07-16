@@ -95,7 +95,7 @@ in render_fore3D_flow.py it is in line305
 ```
  CUDA_VISIBLE_DEVICES=0 python render_stereo.py -m 3d_path --data_device cpu
 ```
-### 3. Generate stereo 3D flight prospects based on reconstructed scenes
+### 3. Generate stereo 3D flight foregrounds based on reconstructed scenes
 ```
  CUDA_VISIBLE_DEVICES=0 python render_fore3D_Stereo.py -m 3d_path --data_device cpu
 ```
@@ -104,7 +104,7 @@ in render_fore3D_flow.py it is in line305
 ```
  CUDA_VISIBLE_DEVICES=0 python render_flow.py -m 3d_path --data_device cpu
 ```
-### 5. Generate optical flow 3D flight prospects based on reconstructed scenes
+### 5. Generate optical flow 3D flight foregrounds based on reconstructed scenes
 ```
  CUDA_VISIBLE_DEVICES=0 python render_fore3D_flow.py -m 3d_path --data_device cpu
 ```
