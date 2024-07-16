@@ -1,6 +1,6 @@
 #  UniOS: Unifying Self-supervised Generalization Framework for Optical Flow and Stereo in Real-world
 
-# Install
+# Installation
 ```
 conda create -y -n Unios python=3.8
 conda activate Unios 
@@ -27,9 +27,12 @@ pip install git+https://github.com/facebookresearch/segment-anything.git
 ```
 Download SAM weights and place them in the corresponding path
 
-运行方式
+## Running
 
-首先以训练场景 
+In this section, we introduce the steps required to run the code.
+
+Taking the commonly used 360-v2 as an example, the first step is to download the dataset.
+
 ```
 CUDA_VISIBLE_DEVICES=0 python train.py -s /media/lh/extradata/Nerf_sence/0280 -m NerF_sence/0280 -r 4 --port 6312 --kernel_size 0.1
 ```
