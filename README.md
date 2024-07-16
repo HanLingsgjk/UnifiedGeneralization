@@ -28,7 +28,7 @@ Recommended installation method on Nvidia official website  https://developer.nv
 ```
 conda install cudatoolkit-dev=11.x -c conda-forge    11.x为对应的CUDAtoolkits版本
 ```
-
+Install key packages and compile rasterized code
 ```
 pip install setuptools==69.5.1
 pip install imageio
