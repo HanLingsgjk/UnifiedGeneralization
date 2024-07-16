@@ -17,6 +17,9 @@ https://github.com/user-attachments/assets/2332bc5a-fc5e-45da-9fd1-e39b0b91e515
 
 
 # Installation
+## Install mip scattering
+
+please note that we have made modifications to the rasterization code here (for rendering radiation field confidence and median depth), which is different from the original version
 ```
 conda create -y -n Unios python=3.8
 conda activate Unios 
