@@ -2,6 +2,7 @@
 
 This code contains the content of the paper: ADFactory: An Effective Framework for Generalizing Optical Flow with Nerf (CVPR2024)
 
+This project introduces a self-supervised generalization method for training optical flow and stereo tasks, which can generate high-quality optical flow and stereo datasets by simply inputting RGB images captured by the camera
 
 https://github.com/user-attachments/assets/3c9e68e2-753c-4507-9934-89f5f7c7a8e6
 
