@@ -2,6 +2,19 @@
 
 This code contains the content of the paper: ADFactory: An Effective Framework for Generalizing Optical Flow with Nerf (CVPR2024)
 
+
+https://github.com/user-attachments/assets/3c9e68e2-753c-4507-9934-89f5f7c7a8e6
+
+
+https://github.com/user-attachments/assets/57c49ebb-120b-4f87-809f-17090cee41c3
+
+
+
+https://github.com/user-attachments/assets/2332bc5a-fc5e-45da-9fd1-e39b0b91e515
+
+
+
+
 # Installation
 ```
 conda create -y -n Unios python=3.8
