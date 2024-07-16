@@ -26,8 +26,9 @@ pip install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 --index-url https
 If you don't have CUDAtoolkits, you need to install them yourself, and the version corresponds to PyTorch
 
 Recommended installation method on Nvidia official website  https://developer.nvidia.com/cuda-toolkit-archive
+11. x is the corresponding CUDA toolkit version
 ```
-conda install cudatoolkit-dev=11.x -c conda-forge    11.x为对应的CUDAtoolkits版本
+conda install cudatoolkit-dev=11.x -c conda-forge  
 ```
 Install key packages and compile rasterized code
 ```
@@ -44,6 +45,7 @@ Install Segment Anything
 pip install git+https://github.com/facebookresearch/segment-anything.git
 ```
 Download SAM weights and place them in the corresponding path
+https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth
 
 # Running 
 
