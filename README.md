@@ -12,7 +12,8 @@ https://github.com/user-attachments/assets/57c49ebb-120b-4f87-809f-17090cee41c3
 
 https://github.com/user-attachments/assets/2332bc5a-fc5e-45da-9fd1-e39b0b91e515
 
-[stereog.pdf](https://github.com/user-attachments/files/16241952/stereog.pdf)
+
+![stereog](https://github.com/user-attachments/assets/e7849b92-57d4-444d-8eb9-783682def986)
 
 
 
