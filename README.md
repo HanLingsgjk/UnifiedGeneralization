@@ -51,16 +51,16 @@ In this section, we introduce the steps required to run the code.
 
 Taking the commonly used 360-v2 as an example, the first step is to download the dataset.
 ## Dataset
-Please download the data from the [Mip-NeRF 360](https://jonbarron.info/mipnerf360/)
+Please download the data from the [Mip-NeRF 360](https://jonbarron.info/mipnerf360/) Extract the data and place it in your preferred location, such as /media/lh/
 
 
 Data_path -> Remember to replace the location where the data is stored with your own path
 
-For example:  /media/lh/extradata/Nerf_sence/0280
+For example:  /media/lh/extradata/360_v2/kitchen
 
 3d_path -> Remember to replace the location for storing 3D reconstruction data with your own path
 
-For example:  Nerf_sence/0280 (This is a relative path, usually placed in the project folder)
+For example:  3d_sence/kitchen (This is a relative path, usually placed in the project folder)
 
 ### 1. Reconstructing scenes based on photo groups
 ```
