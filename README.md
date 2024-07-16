@@ -78,6 +78,18 @@ For example:  3d_sence/kitchen (This is a relative path, usually placed in the p
 ### 1. Reconstructing scenes based on photo groups
 ```
 CUDA_VISIBLE_DEVICES=0 python train.py -s Data_path -m 3d_path -r 4 --port 6312 --kernel_size 0.1
+
+## Generate dataset
+The storage path for generating the dataset needs to be manually set, for example, in render_stereo.py it is in line243
+```
+dataroot = '/home/lh/all_datasets/MIPGS10K_stereotest'
+```
+in render_fore3D_Stereo.py it is in line257
+
+in render_flow.py it is in line263
+
+in render_fore3D_flow.py it is in line305
+
 ```
 ### 2. Generate stereo dataset based on reconstruction of scenes
 ```
