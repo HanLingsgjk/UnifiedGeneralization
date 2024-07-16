@@ -23,10 +23,12 @@ conda activate Unios
 pip install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 --index-url https://download.pytorch.org/whl/cu118
 ```
 If you don't have CUDAtoolkits, you need to install them yourself, and the version corresponds to PyTorch
+
+Recommended installation method on Nvidia official website  https://developer.nvidia.com/cuda-toolkit-archive
 ```
 conda install cudatoolkit-dev=11.x -c conda-forge    11.x为对应的CUDAtoolkits版本
 ```
-Recommended installation method on Nvidia official website
+
 ```
 pip install setuptools==69.5.1
 pip install imageio
