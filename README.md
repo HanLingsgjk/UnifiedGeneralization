@@ -1,5 +1,7 @@
 #  UniOS: Unifying Self-supervised Generalization Framework for Optical Flow and Stereo in Real-world
 
+This code contains the content of the paper: ADFactory: An Effective Framework for Generalizing Optical Flow with Nerf (CVPR2024)
+
 # Installation
 ```
 conda create -y -n Unios python=3.8
@@ -33,25 +35,35 @@ In this section, we introduce the steps required to run the code.
 
 Taking the commonly used 360-v2 as an example, the first step is to download the dataset.
 ## Dataset
-Please download the data from the [Mip-NeRF 360](https://jonbarron.info/mipnerf360/) and request the authors for the treehill and flowers scenes.
+Please download the data from the [Mip-NeRF 360](https://jonbarron.info/mipnerf360/)
+
+
+Data_path -> Remember to replace the location where the data is stored with your own path
+
+For example:  /media/lh/extradata/Nerf_sence/0280
+
+3d_path -> Remember to replace the location for storing 3D reconstruction data with your own path
+
+For example:  Nerf_sence/0280 (This is a relative path, usually placed in the project folder)
+
 ### 1. Reconstructing scenes based on photo groups
 ```
-CUDA_VISIBLE_DEVICES=0 python train.py -s /media/lh/extradata/Nerf_sence/0280 -m NerF_sence/0280 -r 4 --port 6312 --kernel_size 0.1
+CUDA_VISIBLE_DEVICES=0 python train.py -s Data_path -m 3d_path -r 4 --port 6312 --kernel_size 0.1
 ```
 ### 2. Generate stereo dataset based on reconstruction of scenes
 ```
- CUDA_VISIBLE_DEVICES=0 python render_stereo.py -m NerF_sence/0280 --data_device cpu
+ CUDA_VISIBLE_DEVICES=0 python render_stereo.py -m 3d_path --data_device cpu
 ```
 ### 3. Generate stereo 3D flight prospects based on reconstructed scenes
 ```
- CUDA_VISIBLE_DEVICES=0 python render_fore3D_Stereo.py -m NerF_sence/0280--data_device cpu
+ CUDA_VISIBLE_DEVICES=0 python render_fore3D_Stereo.py -m 3d_path --data_device cpu
 ```
 
 ### 4. Generate optical flow dataset based on reconstruction of scenes
 ```
- CUDA_VISIBLE_DEVICES=0 python render_flow.py -m NerF_sence/0280 --data_device cpu
+ CUDA_VISIBLE_DEVICES=0 python render_flow.py -m 3d_path --data_device cpu
 ```
 ### 5. Generate optical flow 3D flight prospects based on reconstructed scenes
 ```
- CUDA_VISIBLE_DEVICES=0 python render_fore3D_flow.py -m NerF_sence/0280 --data_device cpu
+ CUDA_VISIBLE_DEVICES=0 python render_fore3D_flow.py -m 3d_path --data_device cpu
 ```
