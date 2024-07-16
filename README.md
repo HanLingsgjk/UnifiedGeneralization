@@ -1,27 +1,29 @@
-Install
+# Install
 ```
 conda create -y -n Unios python=3.8
 conda activate Unios 
 
 pip install torch==2.0.1 torchvision==0.15.2 torchaudio==2.0.2 --index-url https://download.pytorch.org/whl/cu118
-
-#如果你没有CUDAtoolkits需要自行安装，版本与pytorch对应
+```
+If you don't have CUDAtoolkits, you need to install them yourself, and the version corresponds to PyTorch
+```
 conda install cudatoolkit-dev=11.x -c conda-forge    11.x为对应的CUDAtoolkits版本
-#推荐用Nvidia官网的方法装
-
-pip install setuptools==69.5.1 #very important
+```
+Recommended installation method on Nvidia official website
+```
+pip install setuptools==69.5.1
 pip install imageio
 pip install scikit-image
 pip install -r requirements.txt
 pip install submodules/diff-gaussian-rasterization
 pip install submodules/simple-knn/
-
-
-#安装Segment Anything
-pip install git+https://github.com/facebookresearch/segment-anything.git
-下载SAM权重，并放在对应路径
 ```
 
+Install Segment Anything
+```
+pip install git+https://github.com/facebookresearch/segment-anything.git
+```
+Download SAM weights and place them in the corresponding path
 
 运行方式
 
