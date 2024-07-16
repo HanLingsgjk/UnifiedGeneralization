@@ -46,7 +46,15 @@ pip install git+https://github.com/facebookresearch/segment-anything.git
 ```
 Download SAM weights and place them in the corresponding path
 https://dl.fbaipublicfiles.com/segment_anything/sam_vit_h_4b8939.pth
-
+The paths that need to be changed are:
+1. In   render_fore3D_flow.py  line36
+```
+ sam = sam_model_registry['vit_h'](checkpoint='/home/lh/Track-Anything/checkpoints/sam_vit_h_4b8939.pth')
+```
+2. In   render_fore3D_Stereo.py  line36
+```
+ sam = sam_model_registry['vit_h'](checkpoint='/home/lh/Track-Anything/checkpoints/sam_vit_h_4b8939.pth')
+```
 # Running 
 
 In this section, we introduce the steps required to run the code.
