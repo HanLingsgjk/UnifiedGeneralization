@@ -387,9 +387,7 @@ def render_set(model_path, name, iteration, views, gaussians, pipeline, backgrou
             writeMask(os.path.join(output_filenameDPS, fileid), ddcs, rdds, S)
             print('FlowNum:', kit, 'SSIM_conf:', ssim, 'Disf', abs(flowf1.permute(1,2,0).detach().cpu().numpy()).mean())
             #因为3D高斯把场景描述为显式的三维高斯点云，它天生就有较好的多视角几何一致性，随机飞行噪声也更少
-            #其次我们使用
-            #下一步引入柔性3D高斯和误差容忍制度
-            #双目网络可信度学习
+
 def render_sets(dataset : ModelParams, iteration : int, pipeline : PipelineParams, skip_train : bool, skip_test : bool):
     with torch.no_grad():
         gaussians = GaussianModel(dataset.sh_degree)
