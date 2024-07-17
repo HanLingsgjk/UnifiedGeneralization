@@ -313,13 +313,7 @@ def render_set(model_path, name, iteration, views, gaussians, pipeline, backgrou
                 cv2.imwrite(os.path.join(output_filenamedepthvis, fileid), depths_vis)#保存初始帧的可视化深度结果
 
             c2wf1, c2wf2 = get_sterero_pose(c2w,bl=1+viz)# getnewpose(c2w)  # 生成新的光流视角
-            #在KITTI的情况下
 
-            # TODO 渲染第一帧光流
-            #if driving
-            #if idx < views.__len__()-1:
-            #    view = views[idx+1]
-            #else:
             view = viewtrans(view, c2wf1)
             src_pose1 = view.world_view_transform.transpose(0, 1).inverse()
             renderF1 = render(view, gaussians, pipeline, background, kernel_size=kernel_size)
