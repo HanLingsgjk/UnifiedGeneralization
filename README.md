@@ -18,6 +18,18 @@ https://github.com/user-attachments/assets/54ecef75-c398-4796-86c6-701973204f23
 
 
 
+https://github.com/user-attachments/assets/cbfd527b-446b-4ca9-9b0c-16c7e131df02
+
+
+
+https://github.com/user-attachments/assets/21757410-945a-4839-ac4a-84699e7fc410
+
+
+
+https://github.com/user-attachments/assets/7cc84b34-514a-4e8d-81b1-f75d80739d67
+
+
+
 
 ![stereog](https://github.com/user-attachments/assets/e7849b92-57d4-444d-8eb9-783682def986)
 
