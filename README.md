@@ -4,13 +4,19 @@ This code contains the content of the paper: ADFactory: An Effective Framework f
 
 This project introduces a self-supervised generalization method for training optical flow and stereo tasks, which can generate high-quality optical flow and stereo datasets by simply inputting RGB images captured by the camera
 
-https://github.com/user-attachments/assets/3c9e68e2-753c-4507-9934-89f5f7c7a8e6
 
 
-https://github.com/user-attachments/assets/57c49ebb-120b-4f87-809f-17090cee41c3
+https://github.com/user-attachments/assets/67b1ba10-8db4-4425-822f-6372830f2caa
 
 
-https://github.com/user-attachments/assets/2332bc5a-fc5e-45da-9fd1-e39b0b91e515
+
+https://github.com/user-attachments/assets/c449c228-2dec-4f0a-9b1c-231d5efa653a
+
+
+
+https://github.com/user-attachments/assets/8219cffb-ea6b-427d-9cda-b673d5db57fd
+
+
 
 
 ![stereog](https://github.com/user-attachments/assets/e7849b92-57d4-444d-8eb9-783682def986)
