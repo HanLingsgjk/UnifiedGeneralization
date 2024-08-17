@@ -6,15 +6,18 @@ This project introduces a self-supervised generalization method for training opt
 
 
 
-https://github.com/user-attachments/assets/67b1ba10-8db4-4425-822f-6372830f2caa
+https://github.com/user-attachments/assets/a88bd218-77c4-47c8-ac68-4c2a8cf7ed19
 
 
 
-https://github.com/user-attachments/assets/8219cffb-ea6b-427d-9cda-b673d5db57fd
+https://github.com/user-attachments/assets/57bd1456-5bba-47b8-a268-22cb22776e4f
 
 
 
-https://github.com/user-attachments/assets/54ecef75-c398-4796-86c6-701973204f23
+
+https://github.com/user-attachments/assets/1fce5ca0-bfab-4b54-b0f1-ee1e0d8c5441
+
+
 
 
 
