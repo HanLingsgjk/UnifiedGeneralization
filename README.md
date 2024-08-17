@@ -1,4 +1,4 @@
-#  UniOS: Unifying Self-supervised Generalization Framework for Optical Flow and Stereo in Real-world
+#  Self-Assessed Generation: Trustworthy Label Generation for Optical Flow and Stereo Matching in Real-world
 
 This code contains the content of the paper: ADFactory: An Effective Framework for Generalizing Optical Flow with Nerf (CVPR2024)
 
