@@ -41,9 +41,8 @@ https://github.com/user-attachments/assets/58cd07e9-499b-4c5b-84e8-6297e649989b
 
 
 
-![stereog](https://github.com/user-attachments/assets/e7849b92-57d4-444d-8eb9-783682def986)
+![git2](https://github.com/user-attachments/assets/42b1581b-f68b-45cc-b6c0-c577813cb8c7)
 
-![ZKITTI15](https://github.com/user-attachments/assets/8e655d8d-f9a1-4e41-b1d9-404131967bee)
 
 
 # Installation
