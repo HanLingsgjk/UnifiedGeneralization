@@ -155,7 +155,7 @@ def getoccall(uv,flowf1,flowf1inv):
     imout = bilinear_sampler(flowu1, uvn1[:, :, :2],mode='nearest')
     imoutu = imout[0] + flowf1.detach().cpu()
 
-    occall = imoutu[0].detach().cpu().numpy()
+    occall = (imoutu[0]**2+imoutu[1]**2).sqrt().detach().cpu().numpy()
     return occall
 def viewtrans(view,c2w):
     zone = np.zeros_like(c2w[0:1,:])
