@@ -4,7 +4,7 @@ This code contains the content of the paper: ADFactory: An Effective Framework f
 
 This project introduces a self-supervised generalization method for training optical flow and stereo tasks, which can generate high-quality optical flow and stereo datasets by simply inputting RGB images captured by the camera
 
-
+**We provided weights for ScaleFlow++ trained using GS58 in [Project](https://github.com/HanLingsgjk/CSCV) Readers can reproduce the effect in Table C of the paper SAG by downloading Demo_Scaleflowpp.pth**
 
 https://github.com/user-attachments/assets/a88bd218-77c4-47c8-ac68-4c2a8cf7ed19
 
