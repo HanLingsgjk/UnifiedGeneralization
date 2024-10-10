@@ -6,7 +6,7 @@ This project introduces a self-supervised generalization method for training opt
 
 **We provided weights for ScaleFlow++ trained using GS58 in [Project](https://github.com/HanLingsgjk/CSCV) Readers can reproduce the effect in Table V by downloading Demo_Scaleflowpp.pth**
 
-**The complete GS58 dataset consists of 652GB background data and 334GB foreground data, and we have yet to find a portable public method. We suggest you generate it yourself. Our data sources mainly include 270 scenes provided by [fabiotosi92/NeRF Superior Deep Stereo: A novel paradigm for collecting and generating stereo training data using neural rendering (GitHub)](https://nerfstereo.github.io/), 9 scenes provided by mip-NeRF 360 [(jonbarron. info)](https://jonbarron.info/mipnerf360/), and some still life shots we took using Pocket3 (toy cars, etc.). Using the first two data sources is already sufficient to achieve most of the promised performance.**
+**The complete GS58 dataset consists of 652GB background data and 334GB foreground data, and we have not yet found a suitable way to make it public. We suggest you generate it yourself. Our data sources mainly include 270 scenes provided by [fabiotosi92/NeRF Superior Deep Stereo: A novel paradigm for collecting and generating stereo training data using neural rendering (GitHub)](https://nerfstereo.github.io/), 9 scenes provided by mip-NeRF 360 [(jonbarron. info)](https://jonbarron.info/mipnerf360/), and some still life shots we took using Pocket3 (toy cars, etc.). Using the first two data sources is already sufficient to achieve most of the promised performance.**
 
 https://github.com/user-attachments/assets/a88bd218-77c4-47c8-ac68-4c2a8cf7ed19
 
