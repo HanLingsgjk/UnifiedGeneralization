@@ -140,3 +140,5 @@ in render_fore3D_flow.py it is in line305
 ```
  CUDA_VISIBLE_DEVICES=0 python render_fore3D_flow.py -m 3d_path --data_device cpu
 ```
+# Using your own data
+ please refer to https://github.com/google-research/multinerf 
