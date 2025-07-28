@@ -1,8 +1,10 @@
-#  Self-Assessed Generation: Trustworthy Label Generation for Optical Flow and Stereo Matching in Real-world
+#  Self-Assessed Generation: Trustworthy Label Generation for Optical Flow and Stereo Matching in Real-world (https://arxiv.org/abs/2410.10453)
 
 This code contains the content of the paper: ADFactory: An Effective Framework for Generalizing Optical Flow with Nerf (CVPR2024)
 
 This project introduces a self-supervised generalization method for training optical flow and stereo tasks, which can generate high-quality optical flow and stereo datasets by simply inputting RGB images captured by the camera
+
+
 
 **We provided weights for ScaleFlow++ trained using GS58 in [Project](https://github.com/HanLingsgjk/CSCV) Readers can reproduce the effect in Table V by downloading Demo_Scaleflowpp.pth**
 
